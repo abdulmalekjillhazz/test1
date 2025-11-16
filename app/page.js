@@ -28,7 +28,7 @@ export default function Test() {
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2">
             <h1 className="text-6xl font-extrabold text-gray-900 mb-4">Hello, I'm Abdul Malek</h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-white mb-8 bg-blue-600">
               A passionate developer specializing in building modern web applications with Next.js and Tailwind CSS.
             </p>
             <a 
@@ -53,7 +53,7 @@ export default function Test() {
 
       {/* -------------------- About Section -------------------- */}
       <section id="about" className="min-h-screen max-w-7xl mx-auto pt-16 pb-24 border-t border-gray-100">
-        <h2 className="text-4xl font-bold text-gray-900 mb-10 text-center">👤 About Me & Skills</h2>
+        <h2 className="text-4xl font-bold text-white mb-10 text-center">👤 About Me & Skills</h2>
 
         <div className="overflow-x-auto shadow-xl rounded-lg border border-gray-500">
           <table className="min-w-full divide-y divide-gray-200">
@@ -87,7 +87,7 @@ export default function Test() {
 
       {/* -------------------- Works Section -------------------- */}
       <section id="works" className="min-h-screen max-w-7xl mx-auto pt-16 pb-24 border-t border-gray-100">
-        <h2 className="text-4xl font-bold text-gray-900 mb-10 text-center">💼 Featured Works</h2>
+        <h2 className="text-4xl font-bold text-white mb-10 text-center">💼 Featured Works</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Project 1 */}
