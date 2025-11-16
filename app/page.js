@@ -27,8 +27,8 @@ export default function Test() {
       <section id="home" className="min-h-screen max-w-7xl mx-auto pt-16 pb-24 flex items-center">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2">
-            <h1 className="text-6xl font-extrabold text-gray-900 mb-4">Hello, I'm Abdul Malek</h1>
-            <p className="text-xl text-white mb-8 bg-blue-600">
+            <h1 className="text-6xl font-extrabold text-white mb-4">Hello, I'm Abdul Malek</h1>
+            <p className="text-xl text-white mb-8 bg-blue-600 bg-p-4">
               A passionate developer specializing in building modern web applications with Next.js and Tailwind CSS.
             </p>
             <a 
