@@ -28,7 +28,7 @@ export default function Test() {
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2">
             <h1 className="text-6xl font-extrabold text-white mb-4">Hello, I'm Abdul Malek</h1>
-            <p className="text-xl text-white mb-8 bg-blue-600 p-3 rounded-full">
+            <p className="text-xl text-white mb-8 bg-radial-[at_50%_75%] from-sky-200 via-blue-400 to-indigo-900 to-90% p-4 rounded-full">
               A passionate developer specializing in building modern web applications with Next.js and Tailwind CSS.
             </p>
             <a 
