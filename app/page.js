@@ -33,7 +33,7 @@ export default function Test() {
             </p>
             <a 
               href="#contact"
-              className="inline-block bg-black text-white font-bold px-8 py-3 rounded-full text-lg hover:bg-gray-900 transition duration-300 shadow-lg"
+              className="inline-block bg-black text-white font-bold px-8 py-3 rounded-full text-lg hover:bg-blue-600 transition duration-300 shadow-lg"
             >
               Contact Me
             </a>
