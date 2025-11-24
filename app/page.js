@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
-import { FaDribbble, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 
 // সোশ্যাল আইকন কম্পোনেন্ট
 const SocialIcon = ({ icon: Icon, href }) => (
@@ -51,10 +51,10 @@ const HeroSection = () => {
 
             {/* Social Icons List */}
             <div className="flex space-x-3">
-              <SocialIcon icon={FaDribbble} href="#" />
-              <SocialIcon icon={FaInstagram} href="#" />
-              <SocialIcon icon={FaTwitter} href="#" />
-              <SocialIcon icon={FaLinkedinIn} href="#" />
+              <SocialIcon icon={FaFacebook} href="https://www.facebook.com/AbdulMalekReachargeAndTelecomBusiness/" />
+              <SocialIcon icon={FaInstagram} href="https://www.instagram.com/abdulmalek3367/" />
+              <SocialIcon icon={FaTwitter} href="https://x.com/abdulmalekwd" />
+              <SocialIcon icon={FaLinkedinIn} href="https://www.linkedin.com/in/abdul-malek-877351395" />
             </div>
           </div>
         </section>
