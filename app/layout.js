@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link"; // Link component import করা হলো
+import Footer from "./footer/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -47,12 +48,17 @@ export default function RootLayout({ children }) {
             </nav>
 
           </header>
+    
         </div>
         
         {/* Main Page Content (Home, About, Works, etc.) */}
+
         {children}
-        
+      <Footer>
+          <Link href="/footer" className="flex flex-col min-h-screen">Footer </Link>
+      </Footer>
+             
       </body>
-    </html>
+</html>
   );
 }

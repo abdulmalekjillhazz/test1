@@ -1,8 +1,7 @@
-
 import Image from 'next/image';
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 
-// সোশ্যাল আইকন কম্পোনেন্ট
+// Social Icon Component
 const SocialIcon = ({ icon: Icon, href }) => (
   <a 
     href={href} 
@@ -16,40 +15,36 @@ const SocialIcon = ({ icon: Icon, href }) => (
 );
 
 const HeroSection = () => {
-  // ছবির মতো সূক্ষ্ম গ্র্যাডিয়েন্টের জন্য কাস্টম CSS
   const gradientStyle = {
-    // সাদা (White) থেকে হালকা হলুদ/অ্যাম্বার (Yellow/Amber) রঙের গ্র্যাডিয়েন্ট
     backgroundImage: 'linear-gradient(to right bottom, #d16969ff 20%, #fefce8 60%, #04f560be 100%)',
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 md:p-8">
- 
+    <div className="min-h-screen bg-gray-50 p-4 md:p-8 flex items-center">
 
-      {/* Main Content Grid */}
-      <main className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 min-h-[80vh] items-center">
+      <main className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 
-        {/* Left Content Box (Gradient Background) */}
+        {/* Left Content (Gradient Box) */}
         <section 
-          className="p-8 md:p-12 flex flex-col justify-center rounded-[30px] shadow-2xl min-h-[500px]"
+          className="p-6 md:p-10 flex flex-col justify-center rounded-[30px] shadow-2xl min-h-[420px]"
           style={gradientStyle}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-5 leading-tight text-gray-900">
-            Hi, I am Abdul Malek I'm a proffesional web design & Developer
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-5 leading-snug text-gray-900">
+            Hi, I am <span className="text-black">Abdul Malek</span>
+            <br />
+            I'm a Professional Web Designer & Developer
           </h1>
-          
-          <p className="text-lg text-gray-700 mb-10 max-w-xl">
-            I care a lot about using design for positive impact . and enjoy creating user-centric, delightful, and human experiences.
+
+          <p className="text-base md:text-lg text-gray-700 mb-8 max-w-lg">
+            I care about creating user-friendly, modern, and meaningful digital experiences.
           </p>
-          
-          {/* Contact Button and Social Icons */}
+
+          {/* Contact Button + Social Icons */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
-            
             <button className="px-8 py-3 bg-black text-white rounded-xl font-semibold hover:bg-gray-800 transition-colors shadow-lg">
-              Contact me
+              Contact Me
             </button>
 
-            {/* Social Icons List */}
             <div className="flex space-x-3">
               <SocialIcon icon={FaFacebook} href="https://www.facebook.com/AbdulMalekReachargeAndTelecomBusiness/" />
               <SocialIcon icon={FaInstagram} href="https://www.instagram.com/abdulmalek3367/" />
@@ -58,15 +53,19 @@ const HeroSection = () => {
             </div>
           </div>
         </section>
+
+        {/* Right Image */}
+        <div className="flex justify-center lg:justify-end mt-6 lg:mt-0">
           <Image
-          src="/profile.png"
-          alt = "abdul malek"
-          width={370}
-          height={370}
-             className="ml-15 rounded-3xl "
-         /> 
-          {/* Next.js-এর অপটিমাইজেশনের জন্য next/image কম্পোনেন্ট ব্যবহার করা হলো */}
-       </main>
+            src="/profile.png"
+            alt="Abdul Malek"
+            width={350}
+            height={350}
+            className="rounded-3xl object-cover w-[250px] sm:w-[300px] md:w-[350px]"
+          />
+        </div>
+
+      </main>
     </div>
   );
 };
