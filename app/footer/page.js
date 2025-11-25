@@ -13,7 +13,7 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="/" className="hover:text-white">Home</a></li>
             <li><a href="/about" className="hover:text-white">About</a></li>
@@ -24,7 +24,7 @@ export default function Footer() {
 
         {/* Services */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-3">Services</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">Services</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="#" className="hover:text-white">Web Design</a></li>
             <li><a href="#" className="hover:text-white">Web Development</a></li>
@@ -35,7 +35,7 @@ export default function Footer() {
 
         {/* Contact */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-3">Contact</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">Contact</h3>
           <p className="text-sm">Mohanganj, Netrokona, Bangladesh</p>
           <p className="text-sm mt-2">Email: abdulmalek67343367@gmail.com</p>
           <p className="text-sm">Phone: +880 1914565925</p>
@@ -50,7 +50,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Line */}
-      <div className="text-center mt-10 border-t border-gray-700 pt-5 text-sm">
+      <div className="text-center mt-10 border-t border-gray-900 pt-5 text-sm">
         © {new Date().getFullYear()} Abdul Malek — All rights reserved.
       </div>
     </footer>
