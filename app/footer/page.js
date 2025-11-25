@@ -5,7 +5,7 @@ export default function Footer() {
 
         {/* Logo + Description */}
         <div>
-          <h2 className="text-2xl font-bold text-white">YourBrand</h2>
+          <h2 className="text-2xl font-bold text-white">Abdul Malek</h2>
           <p className="mt-3 text-sm">
             Creating clean & modern web experiences that help brands grow online.
           </p>
@@ -37,8 +37,8 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-white mb-3">Contact</h3>
           <p className="text-sm">Mohanganj, Netrokona, Bangladesh</p>
-          <p className="text-sm mt-2">Email: youremail@gmail.com</p>
-          <p className="text-sm">Phone: +880 1XXXXXXXXX</p>
+          <p className="text-sm mt-2">Email: abdulmalek67343367@gmail.com</p>
+          <p className="text-sm">Phone: +880 1914565925</p>
 
           <div className="flex space-x-4 mt-4">
             <a href="#" className="hover:text-white text-xl">🌐</a>
@@ -51,7 +51,7 @@ export default function Footer() {
 
       {/* Bottom Line */}
       <div className="text-center mt-10 border-t border-gray-700 pt-5 text-sm">
-        © {new Date().getFullYear()} YourBrand — All rights reserved.
+        © {new Date().getFullYear()} Abdul Malek — All rights reserved.
       </div>
     </footer>
   );
