@@ -7,7 +7,7 @@ export default function Works() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Dashboard",
+      title: "Services",
       description: "A complete dashboard built with Next.js and Tailwind for managing online stores.",
       tag: "Next.js"
     },
