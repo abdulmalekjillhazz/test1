@@ -12,13 +12,12 @@ export default function About() {
       {/* Description */}
       <div className="text-lg text-gray-600 leading-8 space-y-6">
         <p>
-          Hello! I'm Abdul Malek, a dedicated web developer based in Bangladesh. 
-          I have a passion for creating clean, modern, and user-friendly web applications.
-        </p>
-        <p>
-          My journey in web development started with a curiosity for how things work on the internet. 
-          Over the years, I have honed my skills in **React, Next.js, and Tailwind CSS**, allowing me to build 
-          high-performance applications that look great on any device.
+        Hello! I'm Abdul Malek, a passionate web developer from Bangladesh.
+        I love building clean, modern, and user-friendly websites that work smoothly on all devices.</p>
+
+ <p>My web development journey began with a simple curiosity about how websites work. Today,
+  I have strong skills in React, Next.js, and Tailwind CSS, which help me create fast, responsive, and professional web applications.
+  I enjoy learning new technologies and improving my skills every day to deliver the best results.
         </p>
       </div>
 
