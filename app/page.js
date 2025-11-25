@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from 'next/image';
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 
@@ -42,7 +43,7 @@ const HeroSection = () => {
           {/* Contact Button + Social Icons */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
             <button className="px-8 py-3 bg-black text-white rounded-xl font-semibold hover:bg-gray-800 transition-colors shadow-lg">
-              Contact Me
+             <Link hrer="/Contact"> Contact Me</Link> 
             </button>
 
             <div className="flex space-x-3">
