@@ -27,7 +27,7 @@ export default function About() {
         <h2 className="text-2xl font-bold mb-6">My Tech Stack</h2>
         <div className="flex flex-wrap gap-4">
           {/* Skill Tags */}
-          {['JavaScript', 'React.js', 'Next.js', 'Tailwind CSS', 'Node.js', 'MongoDB', 'Git'].map((skill) => (
+          {['JavaScript', 'React.js', 'Next.js', 'Tailwind CSS','Git'].map((skill) => (
             <span key={skill} className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full font-medium text-sm border border-gray-200">
               {skill}
             </span>
