@@ -5,7 +5,7 @@ export default function Footer() {
 
         {/* Logo + Description */}
         <div>
-          <h2 className="text-2xl font-bold text-white">Abdul Malek</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Abdul Malek</h2>
           <p className="mt-3 text-sm">
             Creating clean & modern web experiences that help brands grow online.
           </p>
