@@ -74,7 +74,7 @@ export default function Contact() {
       </form>
 
       <div className="mt-12 pt-8 border-t border-gray-200 text-center text-gray-500">
-        <p>Or email me at: <span className="text-black font-bold">abdulmalek67343367@gmail.com</span></p>
+        <p>Or email me at: <span className="text-white-600 font-bold">abdulmalek67343367@gmail.com</span></p>
       </div>
 
       {/* Submitted Data Display */}
