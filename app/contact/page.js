@@ -80,7 +80,7 @@ export default function Contact() {
       {/* Submitted Data Display */}
       {submitted && (
         <div className="mt-10 p-6 rounded-xl bg-gray-800 border">
-          <h2 className="text-2xl text-gray-800 font-bold mb-4">Submitted Information</h2>
+          <h2 className="text-2xl text-white font-bold mb-4">Submitted Information</h2>
 
           <p><span className="font-semibold">Name:</span> {submitted.name}</p>
           <p><span className="font-semibold">Email:</span> {submitted.email}</p>
