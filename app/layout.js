@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
 
             {/* Navigation Links */}
             <nav>
-              <ul className="flex space-x-8 font-medium text-gray-600">
+              <ul className="flex space-x-20 text-2xl text-blue-700">
                 <li><Link href="/" className="hover:text-black transition">Home</Link></li>
                 <li><Link href="/about" className="hover:text-black transition">About</Link></li>
                 <li><Link href="/works" className="hover:text-black transition">Works</Link></li>

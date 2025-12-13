@@ -41,7 +41,7 @@ export default function HeroSection() {
 
       {/* BACKGROUND IMAGE */}
       <Image
-        src="/profile.png"   // 👉 তোমার image
+        src="/profile.jpg"   // 👉 তোমার image
         alt="Abdul Malek"
         fill
         priority
