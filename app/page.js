@@ -1,74 +1,81 @@
-import Link from "next/link";
-import Image from 'next/image';
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+"use client"
 
-// Social Icon Component
-const SocialIcon = ({ icon: Icon, href }) => (
-  <a 
-    href={href} 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="p-3 bg-white rounded-full transition-colors duration-200 hover:bg-gray-100 shadow-md"
-    aria-label={Icon.name.replace('Fa', '')}
-  >
-    <Icon className="h-5 w-5 text-gray-700" />
-  </a>
-);
+import Image from "next/image"
+import { useEffect, useRef } from "react"
 
-const HeroSection = () => {
-  const gradientStyle = {
-    backgroundImage: 'linear-gradient(to right bottom, #d16969ff 20%, #fefce8 60%, #04f560be 100%)',
-  };
+export default function HeroSection() {
+  const glowRef = useRef(null)
+
+  useEffect(() => {
+    const move = (e) => {
+      const x = (e.clientX / window.innerWidth) * 100
+      const y = (e.clientY / window.innerHeight) * 100
+
+      if (!glowRef.current) return
+
+      glowRef.current.style.background = `
+        radial-gradient(
+          400px at ${x}% ${y}%,
+          rgba(255, 80, 80, 0.35),
+          transparent 60%
+        ),
+        radial-gradient(
+          500px at ${100 - x}% ${y}%,
+          rgba(80, 150, 255, 0.35),
+          transparent 65%
+        ),
+        radial-gradient(
+          600px at ${x}% ${100 - y}%,
+          rgba(80, 255, 170, 0.30),
+          transparent 70%
+        )
+      `
+    }
+
+    window.addEventListener("mousemove", move)
+    return () => window.removeEventListener("mousemove", move)
+  }, [])
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 md:p-8 flex items-center">
+    <section className="relative min-h-screen w-full overflow-hidden">
 
-      <main className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      {/* BACKGROUND IMAGE */}
+      <Image
+        src="/profile.png"   // 👉 তোমার image
+        alt="Abdul Malek"
+        fill
+        priority
+        className="object-cover"
+      />
 
-        {/* Left Content (Gradient Box) */}
-        <section 
-          className="p-6 md:p-10 flex flex-col justify-center rounded-[30px] shadow-2xl min-h-[420px]"
-          style={gradientStyle}
-        >
-          <h1 className="text-3xl md:text-5xl font-extrabold mb-5 leading-snug text-gray-900">
-            Hi, I am <span className="text-black">Abdul Malek</span>
-            <br />
-            I'm a Professional Web Designer & Developer
+      {/* COLOR GLOW LAYER */}
+      <div
+        ref={glowRef}
+        className="absolute inset-0 z-10 pointer-events-none mix-blend-screen"
+      />
+
+      {/* DARK OVERLAY (readability) */}
+      <div className="absolute inset-0 bg-black/40 z-20"></div>
+
+      {/* CONTENT */}
+      <div className="relative z-30 min-h-screen flex items-center px-6">
+        <div className="max-w-3xl">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
+            Hi, I’m Abdul Malek <br />
+            Web Designer & Developer
           </h1>
 
-          <p className="text-base md:text-lg text-gray-700 mb-8 max-w-lg">
-            I care about creating user-friendly, modern, and meaningful digital experiences.
+          <p className="text-lg text-gray-200 mb-8">
+            I create modern, meaningful, and interactive digital experiences.
           </p>
 
-          {/* Contact Button + Social Icons */}
-          <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <button className="px-8 py-3 bg-black text-white rounded-xl font-semibold hover:bg-gray-800 transition-colors shadow-lg">
-             <Link href="/contact"> Contact Me</Link> 
-            </button>
-
-            <div className="flex space-x-3">
-              <SocialIcon icon={FaFacebook} href="https://www.facebook.com/AbdulMalekReachargeAndTelecomBusiness/" />
-              <SocialIcon icon={FaInstagram} href="https://www.instagram.com/abdulmalek3367/" />
-              <SocialIcon icon={FaTwitter} href="https://x.com/abdulmalekwd" />
-              <SocialIcon icon={FaLinkedinIn} href="https://www.linkedin.com/in/abdul-malek-877351395" />
-            </div>
-          </div>
-        </section>
-
-        {/* Right Image */}
-        <div className="flex justify-center lg:justify-end mt-6 lg:mt-0">
-          <Image
-            src="/profile.png"
-            alt="Abdul Malek"
-            width={350}
-            height={350}
-            className="rounded-3xl object-cover w-[250px] sm:w-[300px] md:w-[350px]"
-          />
+          <button className="px-8 py-3 bg-white text-black rounded-xl font-semibold hover:scale-105 transition">
+            Contact Me
+          </button>
         </div>
+      </div>
 
-      </main>
-    </div>
-  );
-};
+    </section>
+  )
+}
 
-export default HeroSection;
